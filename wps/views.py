@@ -9,7 +9,7 @@ from rest_framework import status
 @permission_classes([AllowAny])
 def health_check(request: Request) -> Response:
     data = {
-        'message': 'Teamway - work planning service application',
+        'message': 'TW - work planning service application',
         'method': request.method
     }
     return Response(data={'message': data}, status=status.HTTP_200_OK)

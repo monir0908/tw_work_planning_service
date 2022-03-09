@@ -54,7 +54,7 @@ class User(AbstractBaseUser, PermissionsMixin, NameBaseModel):
         default_permissions = ('add', 'change', 'view', )
 
     def __unicode__(self):
-        return u"username: {}".format(self.email)
+        return u"email: {}".format(self.email)
     
     def get_full_name(self):
         """ Returns the full name """
@@ -66,9 +66,6 @@ class User(AbstractBaseUser, PermissionsMixin, NameBaseModel):
 
     def __str__(self):
         return self.get_full_name()
-
-    def get_customer_code(self):
-        return self.customer_code
 
     
     
